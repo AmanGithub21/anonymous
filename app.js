@@ -10,6 +10,7 @@ const dbUrl = process.env.DB_URL;
 const Message = require("./models/Message");
 
 app.use(express.json());
+app.use(express.static("public"));
 app.use(cors());
 mongoose
   .connect(`${dbUrl}`)
